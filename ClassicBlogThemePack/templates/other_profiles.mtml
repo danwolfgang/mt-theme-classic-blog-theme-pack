@@ -1,10 +1,10 @@
-<div class="widget-profiles widget">
-    <h3 class="widget-header">Elsewhere</h3>
-    <div class="widget-content">
 <mt:If tag="PrimaryAuthor">
     <mt:PrimaryAuthor setvar="author">
     <mt:OtherProfiles authors="$author">
         <mt:If name="__first__">
+<div class="widget-profiles widget">
+    <h3 class="widget-header">Elsewhere</h3>
+    <div class="widget-content">
         <ul>
         </mt:If>
             <li>
@@ -14,11 +14,16 @@
             </li>
         <mt:If name="__last__">
         </ul>
+    </div>
+</div>
         </mt:If>
     </mt:OtherProfiles>
 <mt:Else>
     <mt:OtherProfiles>
         <mt:If name="__first__">
+<div class="widget-profiles widget">
+    <h3 class="widget-header">Elsewhere</h3>
+    <div class="widget-content">
         <ul>
         </mt:If>
             <li>
@@ -28,8 +33,8 @@
             </li>
         <mt:If name="__last__">
         </ul>
+    </div>
+</div>
         </mt:If>
     </mt:OtherProfiles>
 </mt:If>
-    </div>
-</div>

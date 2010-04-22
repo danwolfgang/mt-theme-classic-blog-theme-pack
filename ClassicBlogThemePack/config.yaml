@@ -4,7 +4,7 @@ id: ClassicBlogThemePack
 description: '&ldquo;Classic Blog&rdquo; was the original template set included with Movable Type 4.0. This Theme Pack combines the various styles available for the Classic Blog template set, and completely removes the need for the StyleCatcher.'
 author_name: 'Dan Wolfgang, uiNNOVATIONS'
 author_link: 'http://uinnovations.com'
-version: 1.0
+version: 1.0.1
 static_version: 2
 
 template_sets:
@@ -23,6 +23,7 @@ template_sets:
                 tag: PageLayout
                 type: select
                 values: 'layout-wtt,layout-twt,layout-wt,layout-tw'
+                default: 'layout-wtt'
             theme_feature:
                 label: 'Theme Color'
                 hint: 'Select a color to be used with this theme.'
@@ -173,28 +174,28 @@ template_sets:
                 2-column_layout_-_sidebar:
                     label: '2-column layout - Sidebar'
                     widgets:
-                        - Search
+                        - 'Search'
                         - 'About This Page'
                         - 'Home Page Widgets Group'
                         - 'Archive Widgets Group'
+                        - 'Action Streams Profiles'
+                        - 'Action Streams'
                         - 'Page Listing'
-                        - Syndication
-                        - 'OpenID Accepted'
-                        - 'Powered By'
+                        - 'Syndication'
                 3-column_layout_-_primary_sidebar:
                     label: '3-column layout - Primary Sidebar'
                     widgets:
                         - 'Archive Widgets Group'
+                        - 'Action Streams Profiles'
+                        - 'Action Streams'
                         - 'Page Listing'
-                        - Syndication
-                        - 'OpenID Accepted'
-                        - 'Powered By'
                 3-column_layout_-_secondary_sidebar:
                     label: '3-column layout - Secondary Sidebar'
                     widgets:
-                        - Search
+                        - 'Search'
                         - 'Home Page Widgets Group'
                         - 'About This Page'
+                        - 'Syndication'
     classic_blog_cityscape:
         base_path: templates
         label: 'Classic Blog, Cityscape'
@@ -210,12 +211,14 @@ template_sets:
                 tag: PageLayout
                 type: select
                 values: 'layout-wtt,layout-twt,layout-wt,layout-tw'
+                default: 'layout-wtt'
             theme_feature:
                 label: 'Theme City'
                 hint: 'Select a city to be used with this theme.'
                 tag: ThemeFeature
                 type: select
                 values: 'Austin,Boston,Chicago,DC,Houston,Kiev,LA,London,Miami,Nashville,NYC,Philadelphia,Portland,Seattle,SF,Sydney,Tokyo,Toronto,Vegas'
+                default: 'Austin'
                 republish: styles
             primary_author:
                 label: 'Primary Author'
@@ -359,28 +362,28 @@ template_sets:
                 2-column_layout_-_sidebar:
                     label: '2-column layout - Sidebar'
                     widgets:
-                        - Search
+                        - 'Search'
                         - 'About This Page'
                         - 'Home Page Widgets Group'
                         - 'Archive Widgets Group'
+                        - 'Action Streams Profiles'
+                        - 'Action Streams'
                         - 'Page Listing'
-                        - Syndication
-                        - 'OpenID Accepted'
-                        - 'Powered By'
+                        - 'Syndication'
                 3-column_layout_-_primary_sidebar:
                     label: '3-column layout - Primary Sidebar'
                     widgets:
                         - 'Archive Widgets Group'
+                        - 'Action Streams Profiles'
+                        - 'Action Streams'
                         - 'Page Listing'
-                        - Syndication
-                        - 'OpenID Accepted'
-                        - 'Powered By'
                 3-column_layout_-_secondary_sidebar:
                     label: '3-column layout - Secondary Sidebar'
                     widgets:
-                        - Search
+                        - 'Search'
                         - 'Home Page Widgets Group'
                         - 'About This Page'
+                        - 'Syndication'
     classic_blog_hills:
         base_path: templates
         label: 'Classic Blog, Hills'
@@ -394,12 +397,14 @@ template_sets:
                 tag: PageLayout
                 type: select
                 values: 'layout-wtt,layout-twt,layout-wt,layout-tw'
+                default: 'layout-wtt'
             theme_feature:
                 label: 'Theme Hill Color'
                 hint: 'Select a hill color to be used with this theme.'
                 tag: ThemeFeature
                 type: select
                 values: 'Dusk,Green,Midnight,Pink'
+                default: 'Dusk'
                 republish: styles
             primary_author:
                 label: 'Primary Author'
@@ -543,28 +548,28 @@ template_sets:
                 2-column_layout_-_sidebar:
                     label: '2-column layout - Sidebar'
                     widgets:
-                        - Search
+                        - 'Search'
                         - 'About This Page'
                         - 'Home Page Widgets Group'
                         - 'Archive Widgets Group'
+                        - 'Action Streams Profiles'
+                        - 'Action Streams'
                         - 'Page Listing'
-                        - Syndication
-                        - 'OpenID Accepted'
-                        - 'Powered By'
+                        - 'Syndication'
                 3-column_layout_-_primary_sidebar:
                     label: '3-column layout - Primary Sidebar'
                     widgets:
                         - 'Archive Widgets Group'
+                        - 'Action Streams Profiles'
+                        - 'Action Streams'
                         - 'Page Listing'
-                        - Syndication
-                        - 'OpenID Accepted'
-                        - 'Powered By'
                 3-column_layout_-_secondary_sidebar:
                     label: '3-column layout - Secondary Sidebar'
                     widgets:
-                        - Search
+                        - 'Search'
                         - 'Home Page Widgets Group'
                         - 'About This Page'
+                        - 'Syndication'
     classic_blog_unity:
         base_path: templates
         label: 'Classic Blog, Unity'
@@ -578,12 +583,15 @@ template_sets:
                 tag: PageLayout
                 type: select
                 values: 'layout-wtt,layout-twt,layout-wt,layout-tw'
+                default: 'layout-wtt'
             theme_feature:
                 label: 'Theme Color'
                 hint: 'Select a color to be used with this theme.'
                 tag: ThemeFeature
                 type: select
                 values: 'Blue,Green,Purple,Tricolor'
+                default: 'Blue'
+                republish: styles
             primary_author:
                 label: 'Primary Author'
                 hint: "Enter the username of the primary author to display <em>only</em> this users Action Stream profiles in the Other Profiles widget. (By default all author's profiles are displayed.)"
@@ -726,25 +734,25 @@ template_sets:
                 2-column_layout_-_sidebar:
                     label: '2-column layout - Sidebar'
                     widgets:
-                        - Search
+                        - 'Search'
                         - 'About This Page'
                         - 'Home Page Widgets Group'
                         - 'Archive Widgets Group'
+                        - 'Action Streams Profiles'
+                        - 'Action Streams'
                         - 'Page Listing'
-                        - Syndication
-                        - 'OpenID Accepted'
-                        - 'Powered By'
+                        - 'Syndication'
                 3-column_layout_-_primary_sidebar:
                     label: '3-column layout - Primary Sidebar'
                     widgets:
                         - 'Archive Widgets Group'
+                        - 'Action Streams Profiles'
+                        - 'Action Streams'
                         - 'Page Listing'
-                        - Syndication
-                        - 'OpenID Accepted'
-                        - 'Powered By'
                 3-column_layout_-_secondary_sidebar:
                     label: '3-column layout - Secondary Sidebar'
                     widgets:
-                        - Search
+                        - 'Search'
                         - 'Home Page Widgets Group'
                         - 'About This Page'
+                        - 'Syndication'
