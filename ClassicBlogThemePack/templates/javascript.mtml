@@ -884,3 +884,70 @@ if (clearCookie) {
 }
 </mt:IfRegistrationAllowed>
 </mt:IfBlog>
+
+
+$(document).ready(function() { 
+    // Fill in the armor--it keeps spammers away! Do this as soon as the page loads, 
+    // because doing it during the beforeSubmit of the comment process can be a bit
+    // slow, resulting in an invalid comment.
+    if ( $('input[name=armor]') ) {
+        $('input[name=armor]').val('<mt:BlogSitePath encode_sha1="1">');
+    }
+    $('#comments-form').ajaxForm({
+        beforeSubmit: function(data, obj, opt) {
+            // Start by disabling the post button
+            $('#comment-submit').attr("disabled", "disabled");
+            $('#comment-status').css('display', 'block');
+            $('#comment-status').html('<img src="<mt:StaticWebPath>images/indicator.white.gif" width="16" height="16" />');
+
+            // Verify that the comment content is valid
+            var responseText;
+            var u = mtGetUser();
+            if ( u && u.is_authenticated ) { // an authenticated user
+                // If the cookie is valid, there's nothing to check!
+            }
+            else {
+                if ( $('#comment-author').val() == '' ) {
+                    responseText = '<p>Enter an author name before submitting a comment.</p>';
+                }
+                if ( $('#comment-email').val() == '' ) {
+                    responseText = '<p>Enter a valid email address before submitting a comment.</p>';
+                }
+            }
+            if ( $('#comment-text').val() == '' ) {
+                responseText = '<p>Enter some comment text before submitting.</p>';
+            }
+
+            if (responseText) {
+                $('#comment-status').html('<h3>Comment Error</h3>' + responseText);
+                $('#comment-status>p').css('color', 'red');
+                // Enable the button on the form again.
+                $('#comment-submit').removeAttr("disabled");
+                return false;
+            }
+        },
+        success: function(responseText, statusText) {
+            $('#comment-status').css('display', 'block');
+
+            if ( responseText.match(/class="mt-comment-preview/) ) {
+                $('#comment-status').html('<h3>Comment Preview</h3>' + responseText);
+            }
+            else {
+                $('#comment-status').html('<h3>Comment Submitted</h3>' + responseText);
+            }
+
+            if ( responseText.match(/class="comment-confirmation"/) ) {
+                // This will let a Facebook-authenticated user post the story to their Wall.
+                mtFireEvent('commentposted');
+            }
+            if ( responseText.match(/class="comment-(confirmation|pending)"/) ) {
+                // Clear the existing comment because submission was successful.
+                $('#comments-form').clearForm();
+            }
+            // Enable the button on the form again.
+            $('#comment-submit').removeAttr("disabled");
+            mtEntryOnUnload();
+        }
+    });
+});
+

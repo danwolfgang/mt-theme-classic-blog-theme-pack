@@ -13,7 +13,9 @@ Four themes are included in the theme pack:
 
 * Movable Type 4.1 or higher
 * Config Assistant 1.8 or higher
-* Since this is a Theme Manager reference example, you'll want to install the Theme Manager to see how everything works. That said, the Theme Manager is not required for these themes to function.
+* Theme Manager 0.9.4 or higher
+* AutoPrefs 0.4 or higher
+* Custom CSS 0.96 or higher
 
 # Installation
 
