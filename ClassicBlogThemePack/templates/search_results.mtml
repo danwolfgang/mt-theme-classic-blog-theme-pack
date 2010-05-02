@@ -7,7 +7,7 @@
     var user = <$mt:UserSessionState$>;
     /* ]]> */
     </script>
-    <$mt:Include module="HTML Head"$>
+    <$mt:Include module="<__trans phrase="HTML Head">"$>
     <title><$mt:BlogName encode_html="1"$>: Search Results</title>
     <mt:Ignore>Below Javascript adds ajax search capability</mt:Ignore>
     <script type="text/javascript">
@@ -70,7 +70,7 @@
         <div id="container-inner">
 
 
-            <$mt:Include module="Banner Header"$>
+            <$mt:Include module="<__trans phrase="Banner Header">"$>
 
 
             <div id="content">
@@ -100,7 +100,7 @@
                                 </h1>
                                 <div class="search-results-container autopagerize_page_element">
     </mt:SearchResultsHeader>
-                                    <$mt:Include module="Entry Summary" hide_counts="1"$>
+                                    <$mt:Include module="<__trans phrase="Entry Summary">" hide_counts="1"$>
     <mt:SearchResultsFooter>
                                 </div><div class="autopagerize_insert_before"></div>
 
@@ -164,14 +164,14 @@ var timer = window.setTimeout("getResults(" + <$mt:CurrentPage$> + ")", 1*1000);
                         </div>
                     </div>
 
-                    <$mt:Include module="Sidebar"$>
+                    <$mt:Include module="<__trans phrase="Sidebar">"$>
 
 
                 </div>
             </div>
 
 
-            <$mt:Include module="Banner Footer"$>
+            <$mt:Include module="<__trans phrase="Banner Footer">"$>
 
 
         </div>
