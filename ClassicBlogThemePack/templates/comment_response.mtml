@@ -2,7 +2,7 @@
     <mt:Ignore><!-- Success message when comment has been submitted --></mt:Ignore>
     <mt:SetVar name="class" value="comment-confirmation">
     <mt:SetVarBlock name="message">
-        <mt:Include module="Comment Detail">
+        <$mt:Include module="<__trans phrase="Comment Detail">"$>
     </mt:SetVarBlock>
 <mt:Else name="comment_pending">
     <mt:Ignore><!-- Pending message when comment is being held for review --></mt:Ignore>
