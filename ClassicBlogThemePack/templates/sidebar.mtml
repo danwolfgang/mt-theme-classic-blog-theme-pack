@@ -12,10 +12,10 @@
 
 <mt:If tag="PageLayout" like="^layout-(wt|tw)$">
     <mt:Ignore><!-- Use the 2-column layout Sidebar if page layout is layout-wt or layout-tw. --></mt:Ignore>
-    <$mt:WidgetSet name="2-column layout - Sidebar"$>
+    <$mt:WidgetSet name="<__trans phrase="2-column layout - Sidebar">"$>
 <mt:Else>
     <mt:Ignore><!-- Use the 3-column layout Primary Sidebar if page layout is layout-wtt or layout-twt. --></mt:Ignore>
-    <$mt:WidgetSet name="3-column layout - Primary Sidebar"$>
+    <$mt:WidgetSet name="<__trans phrase="3-column layout - Primary Sidebar">"$>
 </mt:If>
 
     </div>
@@ -26,7 +26,7 @@
     <mt:Ignore><!-- Use the 3-column layout Secondary Sidebar if page layout is layout-wtt or layout-twt. --></mt:Ignore>
 <div id="gamma">
     <div id="gamma-inner">
-    <$mt:WidgetSet name="3-column layout - Secondary Sidebar"$>
+    <$mt:WidgetSet name="<__trans phrase="3-column layout - Secondary Sidebar">"$>
     </div>
 </div>
 </mt:If>
