@@ -6,6 +6,7 @@ author_name: 'Dan Wolfgang, uiNNOVATIONS'
 author_link: 'http://uinnovations.com'
 version: 1.0.4
 static_version: 4
+l10n_class: ClassicBlogThemePack::L10N
 
 template_sets:
     classic_blog_minimalist:
