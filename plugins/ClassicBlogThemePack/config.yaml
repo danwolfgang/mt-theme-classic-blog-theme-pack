@@ -4,7 +4,7 @@ id: ClassicBlogThemePack
 description: '&ldquo;Classic Blog&rdquo; was the original template set included with Movable Type 4.0. This Theme Pack combines the various styles available for the Classic Blog template set, and completely removes the need for the StyleCatcher.'
 author_name: 'Dan Wolfgang, uiNNOVATIONS'
 author_link: 'http://uinnovations.com'
-version: 1.0.5
+version: 1.0.6
 static_version: 4
 l10n_class: ClassicBlogThemePack::L10N
 
@@ -1163,6 +1163,166 @@ template_sets:
                         expire_type: 1
                         expire_interval: 360
                         include_with_ssi: 1
+            widgetset:
+                2-column_layout_-_sidebar:
+                    label: '2-column layout - Sidebar'
+                    widgets:
+                        - 'Search'
+                        - 'About This Page'
+                        - 'Home Page Widgets Group'
+                        - 'Archive Widgets Group'
+                        - 'Page Listing'
+                        - 'Syndication'
+                3-column_layout_-_primary_sidebar:
+                    label: '3-column layout - Primary Sidebar'
+                    widgets:
+                        - 'Archive Widgets Group'
+                        - 'Page Listing'
+                3-column_layout_-_secondary_sidebar:
+                    label: '3-column layout - Secondary Sidebar'
+                    widgets:
+                        - 'Search'
+                        - 'Home Page Widgets Group'
+                        - 'About This Page'
+                        - 'Syndication'
+    mt_blog:
+        base_path: legacy_templates
+        label: 'Legacy Classic Blog (Deprecated)'
+        description: 'This is the original &ldquo;Classic Blog&rdquo; template set included with Movable Type 4.0. It is included with Melody only for legacy installs. If you like the Classic Blog design, it is recommended that you use &ldquo;Classic Blog, Cityscape,&rdquo; &ldquo;Classic Blog, Hills,&rdquo; &ldquo;Classic Blog, Minimalist,&rdquo; or &ldquo;Classic Blog, Unity&rdquo; instead.'
+        author_name: 'Six Apart'
+        blog_preferences: classic_blog_preferences
+        preview: 'classic-blog-minimalist/preview.jpg'
+        thumbnail: 'classic-blog-minimalist/thumbnail.jpg'
+        templates:
+            archive:
+                category_entry_listing:
+                    label: 'Category Entry Listing'
+                    mappings:
+                        category:
+                            archive_type: Category
+                            preferred: 1
+                monthly_entry_listing:
+                    label: 'Monthly Entry Listing'
+                    mappings:
+                        monthly:
+                            archive_type: Monthly
+                            preferred: 1
+            index:
+                archive_index:
+                    label: 'Archive Index'
+                    outfile: archives.html
+                    rebuild_me: 1
+                feed_recent:
+                    label: 'Feed - Recent Entries'
+                    outfile: atom.xml
+                    rebuild_me: 1
+                javascript:
+                    label: JavaScript
+                    outfile: mt.js
+                    rebuild_me: 1
+                main_index:
+                    label: 'Main Index'
+                    outfile: index.html
+                    rebuild_me: 1
+                rsd:
+                    label: RSD
+                    outfile: rsd.xml
+                    rebuild_me: 1
+                styles:
+                    label: Stylesheet
+                    outfile: styles.css
+                    rebuild_me: 1
+            individual:
+                entry:
+                    label: Entry
+                    mappings:
+                        individual:
+                            archive_type: Individual
+                            preferred: 1
+            module:
+                banner_footer:
+                    label: 'Banner Footer'
+                banner_header:
+                    label: 'Banner Header'
+                comments:
+                    label: 'Comments'
+                comment_detail:
+                    label: 'Comment Detail'
+                entry_summary:
+                    label: 'Entry Summary'
+                html_head:
+                    label: 'HTML Head'
+                sidebar:
+                    label: Sidebar
+                trackbacks:
+                    label: Trackbacks
+            page:
+                page:
+                    label: Page
+                    mappings:
+                        page:
+                            archive_type: Page
+                            preferred: 1
+            system:
+                comment_preview:
+                    label: 'Comment Preview'
+                comment_response:
+                    label: 'Comment Response'
+                dynamic_error:
+                    label: 'Dynamic Error'
+                popup_image:
+                    label: 'Popup Image'
+                search_results:
+                    label: 'Search Results'
+            widget:
+                about_this_page:
+                    label: 'About This Page'
+                archive_widgets_group:
+                    label: 'Archive Widgets Group'
+                author_archive_list:
+                    label: 'Author Archives'
+                calendar:
+                    label: Calendar
+                category_archive_list:
+                    label: 'Category Archives'
+                creative_commons:
+                    label: 'Creative Commons'
+                current_author_monthly_archive_list:
+                    label: 'Current Author Monthly Archives'
+                current_category_monthly_archive_list:
+                    label: 'Current Category Monthly Archives'
+                date_based_author_archives:
+                    label: 'Date-Based Author Archives'
+                date_based_category_archives:
+                    label: 'Date-Based Category Archives'
+                main_index_widgets_group:
+                    label: 'Home Page Widgets Group'
+                monthly_archive_dropdown:
+                    label: 'Monthly Archives Dropdown'
+                monthly_archive_list:
+                    label: 'Monthly Archives'
+                openid:
+                    label: 'OpenID Accepted'
+                pages_list:
+                    label: 'Page Listing'
+                powered_by:
+                    label: 'Powered By'
+                recent_assets:
+                    label: 'Recent Assets'
+                recent_comments:
+                    label: 'Recent Comments'
+                recent_entries:
+                    label: 'Recent Entries'
+                search:
+                    label: Search
+                signin:
+                    label: 'Sign In'
+                syndication:
+                    label: Syndication
+                tag_cloud:
+                    label: 'Tag Cloud'
+                technorati_search:
+                    label: 'Technorati Search'
             widgetset:
                 2-column_layout_-_sidebar:
                     label: '2-column layout - Sidebar'
