@@ -166,7 +166,7 @@ use vars qw( @ISA %Lexicon );
 	'Recent Entries' => '–ü–æ—Å–ª–µ–¥–Ω–∏–µ –∑–∞–ø–∏—Å–∏',
 
 ## default_templates/banner_footer.mtml
-	'_POWERED_BY' => '–†–∞–±–æ—Ç–∞–µ—Ç –Ω–∞<br /><a href="http://www.movabletype.org/"><$MTProductName$></a>',
+	'_POWERED_BY' => '–†–∞–±–æ—Ç–∞–µ—Ç –Ω–∞<br /><a href="http://www.movabletype.org/"><MTProductName></a>',
 
 ## default_templates/page.mtml
 	'Trackbacks' => '–¢—Ä–µ–∫–±—ç–∫–∏',

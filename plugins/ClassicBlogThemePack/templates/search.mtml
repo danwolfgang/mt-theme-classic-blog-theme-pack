@@ -1,10 +1,10 @@
 <div class="widget-search widget">
     <h3 class="widget-header">Search</h3>
     <div class="widget-content">
-        <form method="get" action="<$mt:CGIPath$><$mt:SearchScript$>">
-            <input type="text" id="search" class="ti" name="search" value="<$mt:SearchString$>" />
+        <form method="get" action="<mt:CGIPath><mt:SearchScript>">
+            <input type="text" id="search" class="ti" name="search" value="<mt:SearchString>" />
 <mt:If name="search_results">
-            <input type="hidden" name="IncludeBlogs" value="<$mt:SearchIncludeBlogs$>" />
+            <input type="hidden" name="IncludeBlogs" value="<mt:SearchIncludeBlogs>" />
             <mt:Ignore>
             <!-- use these options only with MT::App::Search::Legacy -->
             <ul class="search-options">
@@ -13,9 +13,9 @@
             </ul>
             </mt:Ignore>
 <mt:Else>
-            <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>" />
+            <input type="hidden" name="IncludeBlogs" value="<mt:BlogID>" />
 </mt:If>
-            <input type="hidden" name="limit" value="<$mt:SearchMaxResults$>" />
+            <input type="hidden" name="limit" value="<mt:SearchMaxResults>" />
             <input type="submit" accesskey="4" value="Search" />
         </form>
     </div>
@@ -27,7 +27,7 @@
     <div class="widget-content">
         <ul>
         <mt:Tags>
-            <li><a href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;"><$mt:TagName$> (<$mt:TagCount$>)</a></li>
+            <li><a href="javascript:void(0)" onclick="location.href='<mt:TagSearchLink encode_js="1">';return false;"><mt:TagName> (<mt:TagCount>)</a></li>
         </mt:Tags>
         </ul>
     </div>

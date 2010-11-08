@@ -22,10 +22,10 @@
 </mt:Ignore>
 
 // The cookie name to use for storing the blog-side comment session cookie.
-var mtCookieName = "<$mt:UserSessionCookieName$>";
-var mtCookieDomain = "<$mt:UserSessionCookieDomain$>";
-var mtCookiePath = "<$mt:UserSessionCookiePath$>";
-var mtCookieTimeout = <$mt:UserSessionCookieTimeout$>;
+var mtCookieName = "<mt:UserSessionCookieName>";
+var mtCookieDomain = "<mt:UserSessionCookieDomain>";
+var mtCookiePath = "<mt:UserSessionCookiePath>";
+var mtCookieTimeout = <mt:UserSessionCookieTimeout>;
 
 <mt:Ignore>
 /***
@@ -132,7 +132,7 @@ function mtEditLink(entry_id, author_id) {
     if (! entry_id) return;
     if (! author_id) return;
     if (u.id != author_id) return;
-    var link = '<a href="<$mt:AdminScript$>?__mode=view&amp;_type=entry&amp;id=' + entry_id + '">Edit</a>';
+    var link = '<a href="<mt:AdminScript>?__mode=view&amp;_type=entry&amp;id=' + entry_id + '">Edit</a>';
     document.write(link);
 }
 
@@ -159,7 +159,7 @@ function mtShowCaptcha() {
     if (mtCaptchaVisible) return;
     var div = document.getElementById('comments-open-captcha');
     if (div) {
-        div.innerHTML = '<$mt:CaptchaFields$>';
+        div.innerHTML = '<mt:CaptchaFields>';
         mtCaptchaVisible = true;
     }
 }
@@ -321,7 +321,7 @@ function mtFetchUser(cb) {
         mtFetchedUser = true;
         var script = document.createElement('script');
         var ts = new Date().getTime();
-        script.src = '<$mt:CGIPath$><$mt:CommentScript$>?__mode=session_js&blog_id=<$mt:BlogID$>&jsonp=' + cb + '&ts=' + ts;
+        script.src = '<mt:CGIPath><mt:CommentScript>?__mode=session_js&blog_id=<mt:BlogID>&jsonp=' + cb + '&ts=' + ts;
         (document.getElementsByTagName('head'))[0].appendChild(script);
     }
 }
@@ -356,7 +356,7 @@ function mtCommentOnSubmit(f) {
         mtRequestSubmitted = true;
 
         if (f.armor)
-            f.armor.value = '<$mt:BlogSitePath encode_sha1="1"$>';
+            f.armor.value = '<mt:BlogSitePath encode_sha1="1">';
         if (f.bakecookie && f.bakecookie.checked)
             mtSaveUser(f);
 
@@ -484,13 +484,13 @@ mtAttachEvent('usersignin', mtUserOnLoad);
 function mtSignIn() {
     var doc_url = document.URL;
     doc_url = doc_url.replace(/#.+/, '');
-    var url = '<$mt:SignInLink$>';
+    var url = '<mt:SignInLink>';
     if (is_preview) {
         if ( document['comments_form'] ) {
             var entry_id = document['comments_form'].entry_id.value;
             url += '&entry_id=' + entry_id;
         } else {
-            url += '&return_url=<$mt:BlogURL encode_url="1"$>';
+            url += '&return_url=<mt:BlogURL encode_url="1">';
         }
     } else {
         url += '&return_url=' + encodeURIComponent(doc_url);
@@ -535,13 +535,13 @@ function mtSignOut(entry_id) {
     mtClearUser();
     var doc_url = document.URL;
     doc_url = doc_url.replace(/#.+/, '');
-    var url = '<$mt:SignOutLink$>';
+    var url = '<mt:SignOutLink>';
     if (is_preview) {
         if ( document['comments_form'] ) {
             var entry_id = document['comments_form'].entry_id.value;
             url += '&entry_id=' + entry_id;
         } else {
-            url += '&return_url=<$mt:BlogURL encode_url="1"$>';
+            url += '&return_url=<mt:BlogURL encode_url="1">';
         }
     } else {
         url += '&return_url=' + encodeURIComponent(doc_url);
@@ -591,7 +591,7 @@ function mtShowGreeting() {
         } else {
             var user_link;
             if ( u.is_author ) {
-                user_link = '<a href="<$mt:CGIPath$><$mt:CommentScript$>?__mode=edit_profile&return_url=' + encodeURIComponent( location.href );
+                user_link = '<a href="<mt:CGIPath><mt:CommentScript>?__mode=edit_profile&return_url=' + encodeURIComponent( location.href );
                 user_link += '">' + u.name + '</a>';
             } else {
                 // registered user, but not a user with posting rights

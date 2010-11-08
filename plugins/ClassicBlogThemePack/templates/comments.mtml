@@ -10,10 +10,10 @@
     </mt:Ignore>
     <mt:Comments>
         <mt:CommentsHeader>
-    <h2 class="comments-header"><$mt:EntryCommentCount singular="1 Comment" plural="# Comments" none="No Comments"$></h2>
+    <h2 class="comments-header"><mt:EntryCommentCount singular="1 Comment" plural="# Comments" none="No Comments"></h2>
     <div class="comments-content">
         </mt:CommentsHeader>
-        <$mt:Include module="<__trans phrase="Comment Detail">"$>
+        <mt:Include module="<__trans phrase="Comment Detail">">
         <mt:CommentsFooter>
     </div>
         </mt:CommentsFooter>
@@ -33,11 +33,11 @@
         </mt:Ignore>
             <div id="comment-status"></div>
             <div id="comment-greeting"></div>
-            <form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments_form" id="comments-form">
+            <form method="post" action="<mt:CGIPath><mt:CommentScript>" name="comments_form" id="comments-form">
                 <input type="hidden" name="static" value="1" />
-                <input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
-                <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
-                <input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id" />
+                <input type="hidden" name="entry_id" value="<mt:EntryID>" />
+                <input type="hidden" name="__lang" value="<mt:BlogLanguage>" />
+                <input type="hidden" name="parent_id" value="<mt:CommentParentID escape="html">" id="comment-parent-id" />
                 <input type="hidden" name="armor" value="1" />
                 <input type="hidden" name="preview" value="" />
                 <input type="hidden" name="sid" value="" />

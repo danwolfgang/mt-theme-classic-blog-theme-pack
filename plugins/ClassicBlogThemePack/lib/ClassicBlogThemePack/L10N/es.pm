@@ -306,7 +306,7 @@ use vars qw( @ISA %Lexicon );
     'Continue reading <a href="[_1]" rel="bookmark">[_2]</a>.' => 'Contin√∫e leyendo <a href="[_1]" rel="bookmark">[_2]</a>.',
 
 ## default_templates/banner_footer.mtml
-    '_POWERED_BY' => 'Powered by<br /><a href="http://www.movabletype.org/sitees/"><$MTProductName$></a>',
+    '_POWERED_BY' => 'Powered by<br /><a href="http://www.movabletype.org/sitees/"><MTProductName></a>',
 
 ## default_templates/archive_index.mtml
     'Author Archives' => 'Archivos por autor',

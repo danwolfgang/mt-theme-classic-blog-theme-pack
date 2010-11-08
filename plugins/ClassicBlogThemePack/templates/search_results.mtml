@@ -4,11 +4,11 @@
 <head>
     <script type="text/javascript">
     /* <![CDATA[ */
-    var user = <$mt:UserSessionState$>;
+    var user = <mt:UserSessionState>;
     /* ]]> */
     </script>
-    <$mt:Include module="<__trans phrase="HTML Head">"$>
-    <title><$mt:BlogName encode_html="1"$>: Search Results</title>
+    <mt:Include module="<__trans phrase="HTML Head">">
+    <title><mt:BlogName encode_html="1">: Search Results</title>
     <mt:Ignore>Below Javascript adds ajax search capability</mt:Ignore>
     <script type="text/javascript">
     /* <![CDATA[ */
@@ -65,12 +65,12 @@
     /* ]]> */
     </script>
 </head>
-<body id="<$mt:BlogTemplateSetID$>" class="mt-search-results <mt:PageLayout>">
+<body id="<mt:BlogTemplateSetID>" class="mt-search-results <mt:PageLayout>">
     <div id="container">
         <div id="container-inner">
 
 
-            <$mt:Include module="<__trans phrase="Banner Header">"$>
+            <mt:Include module="<__trans phrase="Banner Header">">
 
 
             <div id="content">
@@ -89,44 +89,44 @@
 <mt:SearchResults>
     <mt:SearchResultsHeader>
                             <div id="search-results">
-                                <span id="current-page" class="hidden"><$mt:CurrentPage$></span>
+                                <span id="current-page" class="hidden"><mt:CurrentPage></span>
                                 <h1 id="page-title" class="search-results-header">
         <mt:IfStraightSearch>
-                                    Results matching &ldquo;<$mt:SearchString$>&rdquo;
+                                    Results matching &ldquo;<mt:SearchString>&rdquo;
         </mt:IfStraightSearch>
         <mt:IfTagSearch>
-                                    Results tagged &ldquo;<$mt:SearchString$>&rdquo;
+                                    Results tagged &ldquo;<mt:SearchString>&rdquo;
         </mt:IfTagSearch>
                                 </h1>
                                 <div class="search-results-container autopagerize_page_element">
     </mt:SearchResultsHeader>
-                                    <$mt:Include module="<__trans phrase="Entry Summary">" hide_counts="1"$>
+                                    <mt:Include module="<__trans phrase="Entry Summary">" hide_counts="1">
     <mt:SearchResultsFooter>
                                 </div><div class="autopagerize_insert_before"></div>
 
     <mt:Ignore><!-- Used with the ajax search capability of the new search class --></mt:Ignore>
                                 <div class="content-nav">
-                                    <mt:IfPreviousResults><a href="<$mt:PreviousLink$>" rel="prev" onclick="return swapContent(-1);">&lt; Previous</a>&nbsp;&nbsp;</mt:IfPreviousResults><mt:PagerBlock><mt:IfCurrentPage><$mt:Var name="__value__"$><mt:Else><a href="<$mt:PagerLink$>"><$mt:Var name="__value__"$></a></mt:IfCurrentPage><mt:Unless name="__last__">&nbsp;</mt:Unless></mt:PagerBlock><mt:IfMoreResults>&nbsp;&nbsp;<a href="<$mt:NextLink$>" rel="next" onclick="return swapContent();">Next &gt;</a></mt:IfMoreResults>
+                                    <mt:IfPreviousResults><a href="<mt:PreviousLink>" rel="prev" onclick="return swapContent(-1);">&lt; Previous</a>&nbsp;&nbsp;</mt:IfPreviousResults><mt:PagerBlock><mt:IfCurrentPage><mt:Var name="__value__"><mt:Else><a href="<mt:PagerLink>"><mt:Var name="__value__"></a></mt:IfCurrentPage><mt:Unless name="__last__">&nbsp;</mt:Unless></mt:PagerBlock><mt:IfMoreResults>&nbsp;&nbsp;<a href="<mt:NextLink>" rel="next" onclick="return swapContent();">Next &gt;</a></mt:IfMoreResults>
                                 </div>
                             </div>
     </mt:SearchResultsFooter>
 </mt:SearchResults>
 </mt:SetVarTemplate>
 <mt:Ignore><!-- Display search results constructed in the block above --></mt:Ignore>
-<$mt:Var name="search_results"$>
+<mt:Var name="search_results">
 
 
 <mt:Ignore><!-- Display no results message --></mt:Ignore>
 <mt:NoSearchResults>
                             <h1 id="page-title" class="search-results-header">
     <mt:IfStraightSearch>
-                                Results matching &ldquo;<$mt:SearchString$>&rdquo;
+                                Results matching &ldquo;<mt:SearchString>&rdquo;
     </mt:IfStraightSearch>
     <mt:IfTagSearch>
-                                Results tagged &ldquo;<$mt:SearchString$>&rdquo;
+                                Results tagged &ldquo;<mt:SearchString>&rdquo;
     </mt:IfTagSearch>
                             </h1>
-                            <p>No results found for &ldquo;<$mt:SearchString$>&rdquo;.</p>
+                            <p>No results found for &ldquo;<mt:SearchString>&rdquo;.</p>
 </mt:NoSearchResults>
 
 
@@ -150,12 +150,12 @@
 <!--
 var div = document.getElementById('search-results');
 var results = {
-    '<$mt:CurrentPage$>': {
+    '<mt:CurrentPage>': {
         'content': div.innerHTML,
-        'next_url': '<$mt:NextLink$>'
+        'next_url': '<mt:NextLink>'
     }
 };
-var timer = window.setTimeout("getResults(" + <$mt:CurrentPage$> + ")", 1*1000);
+var timer = window.setTimeout("getResults(" + <mt:CurrentPage> + ")", 1*1000);
 //-->
 </script>
 </mt:IfMoreResults>
@@ -164,14 +164,14 @@ var timer = window.setTimeout("getResults(" + <$mt:CurrentPage$> + ")", 1*1000);
                         </div>
                     </div>
 
-                    <$mt:Include module="<__trans phrase="Sidebar">"$>
+                    <mt:Include module="<__trans phrase="Sidebar">">
 
 
                 </div>
             </div>
 
 
-            <$mt:Include module="<__trans phrase="Banner Footer">"$>
+            <mt:Include module="<__trans phrase="Banner Footer">">
 
 
         </div>

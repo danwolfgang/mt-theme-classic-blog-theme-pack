@@ -4,7 +4,7 @@ id: ClassicBlogThemePack
 description: '&ldquo;Classic Blog&rdquo; was the original template set included with Movable Type 4.0. This Theme Pack combines the various styles available for the Classic Blog template set, and completely removes the need for the StyleCatcher.'
 author_name: 'Dan Wolfgang, uiNNOVATIONS'
 author_link: 'http://uinnovations.com'
-version: 1.0.4
+version: 1.0.5
 static_version: 4
 l10n_class: ClassicBlogThemePack::L10N
 
@@ -25,7 +25,7 @@ template_sets:
                 hint: 'Select the page layout style.'
                 tag: PageLayout
                 type: select
-                values: 'layout-wtt,layout-twt,layout-wt,layout-tw'
+                values: 'layout-wtt,layout-twt,layout-wt,layout-tw,layout-mw,layout-wm'
                 default: 'layout-wtt'
             theme_feature:
                 label: 'Theme Color'
@@ -37,7 +37,7 @@ template_sets:
                 republish: styles
             primary_author:
                 label: 'Primary Author'
-                hint: "Enter the username of the primary author to display <em>only</em> this users Action Stream profiles in the Other Profiles widget. (By default all author's profiles are displayed.)"
+                hint: "Enter the username of the primary author to display <em>only</em> this users Action Stream profiles in the Other Profiles widget. (By default all author's profiles are displayed. Be sure to install the Action Streams plugin to use this feature.)"
                 tag: PrimaryAuthor
                 type: text
         templates:
@@ -85,7 +85,6 @@ template_sets:
                 styles:
                     label: Stylesheet
                     outfile: styles.css
-                    custom_css: 1
                     rebuild_me: 1
                     build_type: 1
             individual:
@@ -290,16 +289,12 @@ template_sets:
                         - 'About This Page'
                         - 'Home Page Widgets Group'
                         - 'Archive Widgets Group'
-                        - 'Action Streams Profiles'
-                        - 'Action Streams'
                         - 'Page Listing'
                         - 'Syndication'
                 3-column_layout_-_primary_sidebar:
                     label: '3-column layout - Primary Sidebar'
                     widgets:
                         - 'Archive Widgets Group'
-                        - 'Action Streams Profiles'
-                        - 'Action Streams'
                         - 'Page Listing'
                 3-column_layout_-_secondary_sidebar:
                     label: '3-column layout - Secondary Sidebar'
@@ -316,15 +311,15 @@ template_sets:
         author:link: 'http://tiffchow.typepad.com/'
         documentation: docs.html
         blog_preferences: classic_blog_preferences
-        thumbnail: 'classic-blog-cityscape/thumbnail.jpg'
         preview: 'classic-blog-cityscape/preview.jpg'
+        thumbnail: 'classic-blog-cityscape/thumbnail.jpg'
         options:
             page_layout:
                 label: 'Page Layout'
                 hint: 'Select the page layout style.'
                 tag: PageLayout
                 type: select
-                values: 'layout-wtt,layout-twt,layout-wt,layout-tw'
+                values: 'layout-wtt,layout-twt,layout-wt,layout-tw,layout-mw,layout-wm'
                 default: 'layout-wtt'
             theme_feature:
                 label: 'Theme City'
@@ -336,7 +331,7 @@ template_sets:
                 republish: styles
             primary_author:
                 label: 'Primary Author'
-                hint: "Enter the username of the primary author to display <em>only</em> this users Action Stream profiles in the Other Profiles widget. (By default all author's profiles are displayed.)"
+                hint: "Enter the username of the primary author to display <em>only</em> this users Action Stream profiles in the Other Profiles widget. (By default all author's profiles are displayed. Be sure to install the Action Streams plugin to use this feature.)"
                 tag: PrimaryAuthor
                 type: text
         templates:
@@ -384,7 +379,6 @@ template_sets:
                 styles:
                     label: Stylesheet
                     outfile: styles.css
-                    custom_css: 1
                     rebuild_me: 1
                     build_type: 1
             individual:
@@ -589,16 +583,12 @@ template_sets:
                         - 'About This Page'
                         - 'Home Page Widgets Group'
                         - 'Archive Widgets Group'
-                        - 'Action Streams Profiles'
-                        - 'Action Streams'
                         - 'Page Listing'
                         - 'Syndication'
                 3-column_layout_-_primary_sidebar:
                     label: '3-column layout - Primary Sidebar'
                     widgets:
                         - 'Archive Widgets Group'
-                        - 'Action Streams Profiles'
-                        - 'Action Streams'
                         - 'Page Listing'
                 3-column_layout_-_secondary_sidebar:
                     label: '3-column layout - Secondary Sidebar'
@@ -623,7 +613,7 @@ template_sets:
                 hint: 'Select the page layout style.'
                 tag: PageLayout
                 type: select
-                values: 'layout-wtt,layout-twt,layout-wt,layout-tw'
+                values: 'layout-wtt,layout-twt,layout-wt,layout-tw,layout-mw,layout-wm'
                 default: 'layout-wtt'
             theme_feature:
                 label: 'Theme Hill Color'
@@ -635,7 +625,7 @@ template_sets:
                 republish: styles
             primary_author:
                 label: 'Primary Author'
-                hint: "Enter the username of the primary author to display <em>only</em> this users Action Stream profiles in the Other Profiles widget. (By default all author's profiles are displayed.)"
+                hint: "Enter the username of the primary author to display <em>only</em> this users Action Stream profiles in the Other Profiles widget. (By default all author's profiles are displayed. Be sure to install the Action Streams plugin to use this feature.)"
                 tag: PrimaryAuthor
                 type: text
         templates:
@@ -683,7 +673,6 @@ template_sets:
                 styles:
                     label: Stylesheet
                     outfile: styles.css
-                    custom_css: 1
                     rebuild_me: 1
                     build_type: 1
             individual:
@@ -888,16 +877,12 @@ template_sets:
                         - 'About This Page'
                         - 'Home Page Widgets Group'
                         - 'Archive Widgets Group'
-                        - 'Action Streams Profiles'
-                        - 'Action Streams'
                         - 'Page Listing'
                         - 'Syndication'
                 3-column_layout_-_primary_sidebar:
                     label: '3-column layout - Primary Sidebar'
                     widgets:
                         - 'Archive Widgets Group'
-                        - 'Action Streams Profiles'
-                        - 'Action Streams'
                         - 'Page Listing'
                 3-column_layout_-_secondary_sidebar:
                     label: '3-column layout - Secondary Sidebar'
@@ -914,15 +899,15 @@ template_sets:
         author_link: 'http://lilia.vox.com'
         documentation: docs.html
         blog_preferences: classic_blog_preferences
-        thumbnail: 'classic-blog-unity/thumbnail.jpg'
         preview: 'classic-blog-unity/preview.jpg'
+        thumbnail: 'classic-blog-unity/thumbnail.jpg'
         options:
             page_layout:
                 label: 'Page Layout'
                 hint: 'Select the page layout style.'
                 tag: PageLayout
                 type: select
-                values: 'layout-wtt,layout-twt,layout-wt,layout-tw'
+                values: 'layout-wtt,layout-twt,layout-wt,layout-tw,layout-mw,layout-wm'
                 default: 'layout-wtt'
             theme_feature:
                 label: 'Theme Color'
@@ -934,7 +919,7 @@ template_sets:
                 republish: styles
             primary_author:
                 label: 'Primary Author'
-                hint: "Enter the username of the primary author to display <em>only</em> this users Action Stream profiles in the Other Profiles widget. (By default all author's profiles are displayed.)"
+                hint: "Enter the username of the primary author to display <em>only</em> this users Action Stream profiles in the Other Profiles widget. (By default all author's profiles are displayed. Be sure to install the Action Streams plugin to use this feature.)"
                 tag: PrimaryAuthor
                 type: text
         templates:
@@ -982,7 +967,6 @@ template_sets:
                 styles:
                     label: Stylesheet
                     outfile: styles.css
-                    custom_css: 1
                     rebuild_me: 1
                     build_type: 1
             individual:
@@ -1187,16 +1171,12 @@ template_sets:
                         - 'About This Page'
                         - 'Home Page Widgets Group'
                         - 'Archive Widgets Group'
-                        - 'Action Streams Profiles'
-                        - 'Action Streams'
                         - 'Page Listing'
                         - 'Syndication'
                 3-column_layout_-_primary_sidebar:
                     label: '3-column layout - Primary Sidebar'
                     widgets:
                         - 'Archive Widgets Group'
-                        - 'Action Streams Profiles'
-                        - 'Action Streams'
                         - 'Page Listing'
                 3-column_layout_-_secondary_sidebar:
                     label: '3-column layout - Secondary Sidebar'

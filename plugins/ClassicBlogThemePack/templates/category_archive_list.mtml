@@ -7,11 +7,11 @@
         <ul>
         </mt:SubCatIsFirst>
         <mt:If tag="CategoryCount">
-            <li><a href="<$mt:CategoryArchiveLink$>"<mt:If tag="CategoryDescription"> title="<$mt:CategoryDescription remove_html="1" encode_html="1"$>"</mt:If>><$mt:CategoryLabel$> (<$mt:CategoryCount$>)</a>
+            <li><a href="<mt:CategoryArchiveLink>"<mt:If tag="CategoryDescription"> title="<mt:CategoryDescription remove_html="1" encode_html="1">"</mt:If>><mt:CategoryLabel> (<mt:CategoryCount>)</a>
         <mt:Else>
-            <li><$mt:CategoryLabel$>
+            <li><mt:CategoryLabel>
         </mt:If>
-        <$mt:SubCatsRecurse$>
+        <mt:SubCatsRecurse>
             </li>
         <mt:SubCatIsLast>
         </ul>

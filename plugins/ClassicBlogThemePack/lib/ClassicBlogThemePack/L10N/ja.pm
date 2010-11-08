@@ -50,7 +50,7 @@ use vars qw( @ISA %Lexicon );
 	'[_1] ([_2])' => '[_1] ([_2])',
 
 ## default_templates/banner_footer.mtml
-	'_POWERED_BY' => 'Powered by <a href="http://www.sixapart.jp/movabletype/"><$MTProductName$></a>',
+	'_POWERED_BY' => 'Powered by <a href="http://www.sixapart.jp/movabletype/"><MTProductName></a>',
 	'This blog is licensed under a <a href="[_1]">Creative Commons License</a>.' => '„Åì„ÅÆ„Éñ„É≠„Ç∞„ÅØ<a href="[_1]">„ÇØ„É™„Ç®„Ç§„ÉÜ„Ç£„Éñ„Éª„Ç≥„É¢„É≥„Ç∫</a>„Åß„É©„Ç§„Çª„É≥„Çπ„Åï„Çå„Å¶„ÅÑ„Åæ„Åô„ÄÇ',
 
 ## default_templates/calendar.mtml

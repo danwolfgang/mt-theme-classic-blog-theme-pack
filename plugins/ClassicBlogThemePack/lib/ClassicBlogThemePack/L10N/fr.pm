@@ -145,7 +145,7 @@ use vars qw( @ISA %Lexicon );
 ## default_templates/comment_detail.mtml
 
 ## default_templates/banner_footer.mtml
-	'_POWERED_BY' => 'Powered by <a href="http://www.movabletype.org/"><$MTProductName$></a>',
+	'_POWERED_BY' => 'Powered by <a href="http://www.movabletype.org/"><MTProductName></a>',
 	'This blog is licensed under a <a href="[_1]">Creative Commons License</a>.' => 'Ce blog poss√®de une licence <a href="[_1]">Creative Commons</a>.',
 
 ## default_templates/search_results.mtml
